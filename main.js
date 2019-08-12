@@ -33,17 +33,17 @@ function colorTitleLetter(i, reverse) {
             case titleText.length:
                 return `Espaçored<span style="color:#3498db">e</span>`
             case titleText.length - 1:
-                return `Espaçore<span style="color:#3498db">d</span><span style="color:#fff">e</span>`;
+                return `Espaçore<span style="color:#3498db">d</span><span style="color:#a2a2a2">e</span>`;
             case 0:
-                return `<span style="color:#3498db">E</span><span style="color:#fff">s</span>paçorede`;
+                return `<span style="color:#3498db">E</span><span style="color:#a2a2a2">s</span>paçorede`;
             case -1:
-                return `<span style="color:#fff">E</span>spaçorede`;
+                return `<span style="color:#a2a2a2">E</span>spaçorede`;
             case -2:
                 return titleText;
             default:
                 return titleText.substr(0, i - 1) + 
                     `<span style="color:#3498db">${titleText.charAt(i - 1)}</span>` +
-                    `<span style="color:#fff">${titleText.charAt(i)}</span>` +
+                    `<span style="color:#a2a2a2">${titleText.charAt(i)}</span>` +
                     titleText.substr(i + 1, titleText.length);
         }
     }
@@ -52,14 +52,14 @@ function colorTitleLetter(i, reverse) {
             case 0:
                 return `<span style="color:#3498db">E</span>` + titleText.substr(1, titleText.length);
             case titleText.length - 1:
-                return `Espaçore<span style="color:#fff">d</span><span style="color:#3498db">e</span>`;
+                return `Espaçore<span style="color:#a2a2a2">d</span><span style="color:#3498db">e</span>`;
             case titleText.length:
-                return `Espaçored<span style="color:#fff">e</span>`;
+                return `Espaçored<span style="color:#a2a2a2">e</span>`;
             case titleText.length + 1:
                 return titleText;
             default:
                 return titleText.substr(0, i - 1) + 
-                    `<span style="color:#fff">${titleText.charAt(i - 1)}</span>` +
+                    `<span style="color:#a2a2a2">${titleText.charAt(i - 1)}</span>` +
                     `<span style="color:#3498db">${titleText.charAt(i)}</span>` +
                     titleText.substr(i + 1, titleText.length);
         }
@@ -81,7 +81,7 @@ function blinkTitle(title, repeat) {
     setTimeout(() => {
         title.style.color = "#3498db";
         setTimeout(() => {
-            title.style.color = "#fff";
+            title.style.color = "#ffe875";
             if (repeat)
                 blinkTitle(title, false);
             else {
