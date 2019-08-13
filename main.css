@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Karla');
 
-html, body {
+html {
+    height: 100%;
+}
+
+body {
     background: #3498db;
     font-family: "Karla", sans-serif;
     color: #2b2b2b;
-    font-size: 1.2em;
+    font-size: 0.8em;
     overflow: hidden;
     height: 100%;
     margin: 0;
@@ -14,7 +18,6 @@ html, body {
     text-align: center;
     padding: 2em 0;
     background: #fff;
-    margin: 0px 7em;
     overflow: auto;
     height: 100%;
 }
@@ -25,13 +28,29 @@ html, body {
 
 h1 {
     font-family: "Press Start 2P", monospace;
+    font-size: 1.5em;
 }
 
 .teehee {
     color: #a2a2a2;
     position: absolute;
-    bottom: 5;
+    bottom: 5px;
     left: 0;
     right: 0;
     margin: 0 auto;
 }
+
+@media (min-width: 1280px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #content {
+        margin: 0 7em;
+    }
+}
+
