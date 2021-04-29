@@ -1,7 +1,5 @@
 const titleText = "Espaçorede";
 
-// animation frameworks are for noobs, i did it jank way
-
 function triggerAnimation(title, reverse = false) {
     let cycles = 0;
     if (reverse)
